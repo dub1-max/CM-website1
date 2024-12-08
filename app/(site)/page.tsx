@@ -12,9 +12,11 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
+import Maps from "@/components/Maps";
+import mapConfig from "@/components/static-data/mapConfig";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
+  title: "Biz Space Heading need to be chnaged",
   description: "This is Home for Solid Pro",
   // other metadata
 };
@@ -23,7 +25,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Brands />
+      {/**<Brands />*/}
       <Feature />
       <About />
       <FeaturesTab />
@@ -33,8 +35,9 @@ export default function Home() {
       <FAQ />
       <Testimonial />
       <Pricing />
-      <Contact />
       <Blog />
+      <Maps googleMapUrl={mapConfig.googleMapUrl1} />
+      <Contact />
     </main>
   );
 }
