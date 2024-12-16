@@ -34,8 +34,8 @@ module.exports = {
         meta: "#20C5A8",
         waterloo: "#757693",
         manatee: "#999AA1",
-        alabaster: "#FBFBFB",
-        zumthor: "#EDF5FF",
+        alabaster: "#a8e491",
+        zumthor: "#a8e491",//Premium icon oval theme
         socialicon: "#D1D8E0",
       },
       fontSize: {

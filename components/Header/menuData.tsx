@@ -24,7 +24,7 @@ const menuData: Menu[] = [
     title: "Docs",
     newTab: false,
     path: "/docs",
-  },
+  }/*,
   {
     id: 3,
     title: "Pages",
@@ -67,7 +67,7 @@ const menuData: Menu[] = [
         path: "/error",
       },
     ],
-  },
+  }*/,
 
   {
     id: 4,
