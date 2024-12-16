@@ -29,92 +29,90 @@ export default function Carousel({
   }, [autoSlide, autoSlideInterval]);
 
   return (
-    <section>
-<div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          {/* <!-- Section Title Start --> */}
-          <div className="animate_top mx-auto text-center">
-            <SectionHeader
-              headerInfo={{
-                title: `GALLERY`,
-                subtitle: `Gallery`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
-              }}
-            />
-          </div>
-          {/* <!-- Section Title End --> */}
+    <section style={{borderRadius:"15px"}}>
+      <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+        {/* <!-- Section Title Start --> */}
+        <div className="animate_top mx-auto text-center">
+          <SectionHeader
+            headerInfo={{
+              title: `GALLERY`,
+              subtitle: `Gallery`,
+              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+            }}
+          />
         </div>
+        {/* <!-- Section Title End --> */}
+      </div>
 
-
-    <div
-      className="relative mx-auto overflow-hidden"
-      style={{
-        paddingTop: "5%",
-        maxWidth: "90%", // Set carousel width to 80% of the screen
-        
-      }}
-      
-    >
-      <a href="#carousel"></a>
-      {/* Slider Container */}
       <div
-      
-        className="flex transition-transform duration-500 ease-out"
+        className="relative mx-auto overflow-hidden"
         style={{
-          transform: `translateX(-${curr * 100}%)`, // Move to the current slide
-          width: `${slides.length * 100}%`, // Adjust the container width based on number of slides
+          paddingTop: "5%",
+          maxWidth: "90%", // Set carousel width to 80% of the screen
+          borderRadius: "15px",
         }}
       >
-        {slides.map((img, index) => (
-          <div
-            key={index}
-            className="w-full flex-shrink-0"
-            style={{ width: "100%" }} // Each slide takes full width
-          >
-            <img
-            
-              src={img}
-              alt={`Slide ${index + 1}`}
-              className="mx-auto h-[450px] w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-
-      {/* Navigation Buttons */}
-      <div className="absolute inset-0 flex items-center justify-between px-4"
-      style={{
-        paddingTop: "5%"
-      }}
-      >
-        <button
-          onClick={prev}
-          className="rounded-full bg-white/90 p-0 text-gray-700 shadow-md hover:bg-gray-100 hover:scale-110 transition-transform duration-200 ease-in-out"
+        <a href="#carousel"></a>
+        {/* Slider Container */}
+        <div
+          className="flex transition-transform duration-500 ease-out"
+          style={{
+            transform: `translateX(-${curr * 100}%)`, // Move to the current slide
+            width: `${slides.length * 100}%`, // Adjust the container width based on number of slides
+          }}
         >
-          <ChevronLeft size={40} />
-        </button>
-        <button
-          onClick={next}
-          className="rounded-full bg-white/90 p-0 text-gray-700 shadow-md hover:bg-gray-100 hover:scale-110 transition-transform duration-200 ease-in-out"
-        >
-          <ChevronRight size={40} />
-        </button>
-      </div>
-
-      {/* Indicators */}
-      <div className="absolute bottom-2 left-0 right-0">
-        <div className="flex items-center justify-center gap-2">
-          {slides.map((_, i) => (
+          {slides.map((img, index) => (
             <div
-              key={i}
-              className={`h-1 w-1 rounded-full bg-white transition-all ${
-                curr === i ? "p-1" : "bg-opacity-50"
-              }`}
-              onClick={() => setCurr(i)} // Allow clicking indicators to navigate
-            />
+              key={index}
+              className="w-full flex-shrink-0"
+              style={{ width: "100%" }} // Each slide takes full width
+            >
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
+                className="mx-auto h-[450px] w-full object-cover"
+              />
+            </div>
           ))}
         </div>
+
+        {/* Navigation Buttons */}
+        <div
+          className="absolute inset-0 flex items-center justify-between px-4"
+          style={{
+            paddingTop: "5%",
+          }}
+        >
+          <button
+            onClick={prev}
+            className="rounded-full bg-white/90 p-0 text-gray-700 shadow-md transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-gray-100"
+          >
+            <ChevronLeft size={40} />
+          </button>
+          <button
+            onClick={next}
+            className="rounded-full bg-white/90 p-0 text-gray-700 shadow-md transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-gray-100"
+          >
+            <ChevronRight size={40} />
+          </button>
+        </div>
+
+        {/* Indicators */}
+        <div className="absolute bottom-2 left-0 right-0">
+          <div className="flex items-center justify-center gap-2">
+            {slides.map((_, i) => (
+              <div
+                key={i}
+                className={`h-1 w-1 rounded-full bg-white transition-all ${
+                  curr === i ? "p-1" : "bg-opacity-50"
+                }`}
+                onClick={() => setCurr(i)} // Allow clicking indicators to navigate
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+      <br />
     </section>
   );
 }
