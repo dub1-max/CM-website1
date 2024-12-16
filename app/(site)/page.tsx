@@ -14,6 +14,13 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 import Maps from "@/components/Maps";
 import mapConfig from "@/components/static-data/mapConfig";
+import Carousel from "@/components/Carousel";
+const slides = [
+  "https://i.ibb.co/ncrXc2V/1.png",
+  "https://i.ibb.co/B3s7v4h/2.png",
+  "https://i.ibb.co/XXR8kzF/3.png"
+  ];
+  
 
 export const metadata: Metadata = {
   title: "Biz Space Heading need to be chnaged",
@@ -27,6 +34,7 @@ export default function Home() {
       <Hero />
       {/**<Brands />*/}
       <Feature />
+      <Carousel autoSlide={true} autoSlideInterval={6000} slides={slides} />
       <About />
       <FeaturesTab />
       <FunFact />

@@ -1,6 +1,6 @@
 "use client";
 import SectionHeader from "../Common/SectionHeader";
-import mapConfig from "@/components/static-data/mapConfig";
+
 
 // Define the type for props
 type MapsProps = {
@@ -51,6 +51,8 @@ export default function Maps({ googleMapUrl }: MapsProps) {
           ></iframe>
         </div>
       </section>
+      <br />
+      <br />
     </section>
   );
 }
