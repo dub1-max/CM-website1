@@ -21,11 +21,11 @@ module.exports = {
         stroke: "#EEEEEE",
         strokedark: "#2D2F40",
         hoverdark: "#252A42",
-        titlebg: "#ADFFF8",
+        titlebg: "#ADFFF8", //blue
         titlebg2: "#FFEAC2",
-        titlebgdark: "#46495A",
+        titlebgdark: "#AD0FF7", //purple
         btndark: "#292E45",
-        white: "#FFFFFF",
+        white: "#FFFFFF", //non backround color
         black: "#181C31",
         blackho: "#2C3149",
         blacksection: "#1C2136",
@@ -140,6 +140,9 @@ module.exports = {
         line1: "line 3s linear infinite",
         line2: "line 6s linear infinite",
         line3: "line 9s linear infinite",
+      },
+      backgroundImage: {
+        'gradient-lightgreen-darkgreen': 'linear-gradient(90deg, rgba(4,99,6,1) 10%, rgba(168,228,145,1) 46%, rgba(148,228,143,0.20780812324929976) 92%);',
       },
     },
   },

@@ -203,6 +203,7 @@ const Contact = () => {
             </motion.div>
           </div>
         </div>
+        <br />
       </section>
       {/* <!-- ===== Contact End ===== --> */}
     </>
