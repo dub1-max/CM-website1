@@ -29,7 +29,7 @@ export default function Carousel({
   }, [autoSlide, autoSlideInterval]);
 
   return (
-    <section style={{borderRadius:"15px"}}>
+    <section id="gallery" style={{borderRadius:"15px"}}>
       <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
         {/* <!-- Section Title Start --> */}
         <div className="animate_top mx-auto text-center">
