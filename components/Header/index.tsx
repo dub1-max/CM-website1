@@ -155,7 +155,7 @@ const Header = () => {
             
             <Link
               href="/support"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-black duration-300 ease-in-out hover:bg-ContactUsBtn"
             >
               Contact Us
             </Link>

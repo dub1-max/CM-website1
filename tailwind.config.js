@@ -33,15 +33,16 @@ module.exports = {
         white: "#FFFFFF", //non backround color
         black: "#181C31",
         blackho: "#2C3149",
-        blacksection: "#1C2136",
-        primary: "#006BFF",
+        blacksection: "#3b3b3b",
+        primary: "#ADFFF8",
         primaryho: "#0063EC",
         meta: "#20C5A8",
         waterloo: "#757693",
         manatee: "#999AA1",
         alabaster: "#a8e491",
-        zumthor: "#a8e491",//Premium icon oval theme
+        zumthor: "#a8e490",//Premium icon oval theme
         socialicon: "#D1D8E0",
+        ContactUsBtn:"#84e188"
       },
       fontSize: {
         metatitle: ["12px", "20px"],
@@ -148,7 +149,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-lightgreen-darkgreen': 'linear-gradient(90deg, rgba(4,99,6,1) 10%, rgba(168,228,145,1) 46%, rgba(148,228,143,0.20780812324929976) 92%);',
-        "green-light":"radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(84,225,112,0.8492647058823529) 0%, rgba(0,212,255,1) 100%);"
+        "green-dark":"radial-gradient(circle, hsla(123, 88.40%, 23.70%, 0.99) 0%, rgba(0,0,0,0.9389005602240896) 100%);"
       },
     },
   },
