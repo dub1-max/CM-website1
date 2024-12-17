@@ -9,6 +9,11 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  light:{
+    colors: {
+      "green-light":"radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(84,225,112,0.8492647058823529) 0%, rgba(0,212,255,1) 100%);"
+    }
+  },
   darkMode: "class",
   theme: {
     fontFamily: {
@@ -143,6 +148,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-lightgreen-darkgreen': 'linear-gradient(90deg, rgba(4,99,6,1) 10%, rgba(168,228,145,1) 46%, rgba(148,228,143,0.20780812324929976) 92%);',
+        "green-light":"radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(84,225,112,0.8492647058823529) 0%, rgba(0,212,255,1) 100%);"
       },
     },
   },
