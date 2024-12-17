@@ -11,12 +11,26 @@ const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [hiddenNavbar, setHiddenNavbar] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const pathUrl = usePathname();
 
-  // Sticky menu
+  // Sticky menu with hide/reveal behavior
   const handleStickyMenu = () => {
-    if (window.scrollY >= 80) {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // User scrolls down -> hide navbar
+      setHiddenNavbar(true);
+    } else {
+      // User scrolls up -> show navbar
+      setHiddenNavbar(false);
+    }
+
+    setLastScrollY(currentScrollY);
+
+    if (currentScrollY > 80) {
       setStickyMenu(true);
     } else {
       setStickyMenu(false);
@@ -25,36 +39,35 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
-  });
+    return () => window.removeEventListener("scroll", handleStickyMenu);
+  }, [lastScrollY]);
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full py-7 ${
-        stickyMenu
-          ? "bg-transparent !py-4 shadow transition duration-100 dark:bg-transparent"
-          : ""
-      }`}
+      className={`fixed left-0 top-0 z-50 w-full py-5 transition-transform duration-100 ease-in-out ${
+        stickyMenu ? "bg-white shadow-md dark:bg-blacksection" : ""
+      } ${hiddenNavbar ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
           <a href="/">
             <Image
-              src="/images/logo/logo-dark.svg"
+              src="/images/logo/cm.png"
               alt="logo"
-              width={119.03}
-              height={30}
+              width={40} // Change width here
+              height={8} // Change height here
               className="hidden w-full dark:block"
             />
             <Image
-              src="/images/logo/logo-light.svg"
+              src="/images/logo/cm.png"
               alt="logo"
-              width={119.03}
-              height={30}
+              width={40} // Change width here
+              height={8} // Change height here
               className="w-full dark:hidden"
             />
           </a>
 
-          {/* <!-- Hamburger Toggle BTN --> */}
+          {/* Hamburger Toggle BTN */}
           <button
             aria-label="hamburger Toggler"
             className="block xl:hidden"
@@ -92,10 +105,10 @@ const Header = () => {
               </span>
             </span>
           </button>
-          {/* <!-- Hamburger Toggle BTN --> */}
+          {/* Hamburger Toggle BTN */}
         </div>
 
-        {/* Nav Menu Start   */}
+        {/* Nav Menu Start */}
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
@@ -152,7 +165,6 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            
             <Link
               href="/support"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-black duration-300 ease-in-out hover:bg-ContactUsBtn"
@@ -166,7 +178,5 @@ const Header = () => {
     </header>
   );
 };
-
-// w-full delay-300
 
 export default Header;
