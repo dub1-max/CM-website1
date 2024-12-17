@@ -33,7 +33,7 @@ module.exports = {
         white: "#FFFFFF", //non backround color
         black: "#181C31",
         blackho: "#2C3149",
-        blacksection: "#3b3b3b",
+        blacksection: "#3b3b3b",//gray
         primary: "#ADFFF8",
         primaryho: "#0063EC",
         meta: "#20C5A8",
