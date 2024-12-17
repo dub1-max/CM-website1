@@ -23,7 +23,7 @@ const slides = [
   
 
 export const metadata: Metadata = {
-  title: "Biz Space Heading need to be chnaged",
+  title: "Connecting Minds Heading need to be chnaged",
   description: "This is Home for Solid Pro",
   // other metadata
 };
