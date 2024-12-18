@@ -30,6 +30,7 @@ const Pricing = () => {
               className="dark:hidden"
             />
           </div>
+
           <div className="flex flex-wrap justify-center gap-7.5 lg:flex-nowrap xl:gap-12.5">
             {/* Basic Plan */}
             <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
@@ -220,15 +221,17 @@ const Pricing = () => {
                 </svg>
               </button>
             </div>
-
+          </div>
+          <br />
+          <div className="flex flex-wrap justify-center gap-7.5 lg:flex-nowrap xl:gap-12.5">
             {/** 4*/}
             <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              <h4 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
                 AED 50-75{" "}
                 <span className="text-regular text-waterloo dark:text-manatee">
                   /day
                 </span>
-              </h3>
+              </h4>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
                 Occasional Flexi Desk
               </h4>
@@ -280,12 +283,12 @@ const Pricing = () => {
             </div>
             {/**5 */}
             <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              <h4 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
                 Negotiable{" "}
                 <span className="text-regular text-waterloo dark:text-manatee">
                   (based on specific needs)
                 </span>
-              </h3>
+              </h4>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
                 Tailored Flexi Desk
               </h4>
@@ -335,8 +338,6 @@ const Pricing = () => {
                 </svg>
               </button>
             </div>
-
-            {/* Add Premium, Pay-As-You-Go, Customizable */}
           </div>
         </div>
       </section>
