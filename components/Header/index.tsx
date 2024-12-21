@@ -152,8 +152,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-black hover:text-white"
-                          : "text-black hover:text-white" //navbar content color  
+                          ? "text-black hover:text-primary"
+                          : "text-black hover:text-primary" //navbar content color  
                       }
                     >
                       {menuItem.title}
@@ -167,7 +167,7 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <Link
               href="/support"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-black duration-300 ease-in-out hover:bg-ContactUsBtn"
+              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-black duration-300 ease-in-out hover:bg-primaryho"
             >
               Contact Us
             </Link>
