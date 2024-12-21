@@ -152,8 +152,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-black hover:text-primary"
-                          : "text-black hover:text-primary" //navbar content color  
+                          ? "text-black hover:text-primary dark:text-white hover:text-primaryho"
+                          : "text-black hover:text-primary dark:text-white hover:text-primaryho" //navbar content color  
                       }
                     >
                       {menuItem.title}
