@@ -128,7 +128,7 @@ const Header = () => {
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-white"
+                            className="h-3 w-3 cursor-pointer fill-black group-hover:fill-white"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                           >
@@ -153,7 +153,7 @@ const Header = () => {
                       className={
                         pathUrl === menuItem.path
                           ? "text-black hover:text-white"
-                          : "hover:text-white"
+                          : "text-black hover:text-white" //navbar content color  
                       }
                     >
                       {menuItem.title}
